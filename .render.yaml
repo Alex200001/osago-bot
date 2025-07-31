@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: osago-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
