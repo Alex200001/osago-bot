@@ -1,3 +1,4 @@
+
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.utils import executor
@@ -62,3 +63,6 @@ async def handle_kbm(msg: types.Message):
         await msg.answer(f"Примерная стоимость ОСАГО: {int(result)} ₽")
     except ValueError:
         await msg.answer("Введите корректное значение КБМ.")
+
+if __name__ == '__main__':
+    executor.start_polling(dp, skip_updates=True)
